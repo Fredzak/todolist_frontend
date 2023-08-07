@@ -1,7 +1,46 @@
 .App {
   text-align: center;
 }
+.mr-3{
+margin-right: 20px;
+}
+.card-title-holder{
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.box-holder{
+  border: 1px solid gray;;
+  border-radius: 6px;
+  text-align: center;
+  background-color: lightgray;
+  padding: 10px;
+  margin: auto;
+  width: 250px;
+}
+.text-sm{
+  text-transform: none !important;
+  text-decoration: none !important;
+}
+.todoList{
+  margin-bottom: 5px;
 
+}
+.input{
+  width: 250px;
+  margin-top: 5px;
+}
+.card-descrpition{
+  margin: 5px;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid darkgray;
+}
+.tags{
+  color: #4c4f55;
+}
+.card-footer{
+  border-top: 1px solid lightgray;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

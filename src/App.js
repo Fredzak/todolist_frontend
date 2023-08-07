@@ -1,23 +1,33 @@
 import logo from './logo.svg';
+import Card from './components/listCard';
 import './App.css';
+import axios from 'axios';
+import TodoList from './pages/todoList';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [todolists, setTodolists]= useState([]);
+  
+  useEffect(()=>{
+    axios.get('http://127.0.0.1:4000/lists')
+      .then(kiday => {
+        setTodolists(kiday.data); //assiging to data
+        // console.log(data)
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
+  
+  // console.log(data)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TodoList/>
+      { todolists.map((item)=>(
+        <Card  key={item.title} title={item.title} description={item.description} expireDate={item.expireDate}/>
+      ))
+      
+}
     </div>
   );
 }
