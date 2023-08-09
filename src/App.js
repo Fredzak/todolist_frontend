@@ -9,9 +9,9 @@ function App() {
   const [todolists, setTodolists]= useState([]);
   
   useEffect(()=>{
-    axios.get('http://127.0.0.1:4000/lists')
+    axios.get('http://127.0.0.1:4000/user')
       .then(kiday => {
-        setTodolists(kiday.data); //assiging to data
+        setTodolists(kiday.data.users); //assiging to data
         // console.log(data)
       })
       .catch(error => {
@@ -21,10 +21,10 @@ function App() {
   
   // console.log(data)
   return (
-    <div className="App">
+    <div className="App bg-orange-600">
       <TodoList/>
       { todolists.map((item)=>(
-        <Card  key={item.title} title={item.title} description={item.description} expireDate={item.expireDate}/>
+        <Card  key={item.firstName} title={item.midleName} description={item.lastName} expireDate={item.lastName}/>
       ))
       
 }

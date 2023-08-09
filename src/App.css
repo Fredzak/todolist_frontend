@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .App {
   text-align: center;
 }
@@ -12,7 +15,6 @@ margin-right: 20px;
   border: 1px solid gray;;
   border-radius: 6px;
   text-align: center;
-  background-color: lightgray;
   padding: 10px;
   margin: auto;
   width: 250px;

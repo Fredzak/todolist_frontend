@@ -1,6 +1,6 @@
 function card(props) {
     return (
-        <div className="box-holder">
+        <div className="box-holder bg-blue-500">
             <div className="card-title-holder">
                 <span className="card-check mr-3">
                     <input type="checkbox"  name="" id="" />

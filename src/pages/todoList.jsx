@@ -20,7 +20,7 @@ function TodoList() {
       <div>
         <input
           type="text"
-          className="input"
+          className="input mr-10 text-2xl"
           name="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
